@@ -1,12 +1,27 @@
 <html>
-  <header>
-    <h1>Chitter!</h1>
+<style>
+/* Style the element with the id "myHeader" */
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style all elements with the class name "city" */
+.cont {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+</style>
+  <header id="myHeader">
+    <table width="100%" align="center"><tr><td><h2><emp><%= (Time.now).inspect[0..18] %></emp></h2></td><td><h1>Welcome to Chitter!</h1></td><td><h2><%= ["Hola","Aloha","Howdie","Hiya","Cowabonga"].sample%>&nbsp;<%=session[:username]%></h2></td></tr></table>
   </header>
   <body>
-   <div style="background-color:black;">
-     <table align="center">
+     <table align="center" width="100%" class="cont">
       <tr>
-        <td><textarea name="peeps" rows="4" cols="100">pee here!</textarea><br></td>
+        <td><textarea name="peeps" rows="4" cols="225">pee here!</textarea><br></td>
       </tr>
       <tr>
         <form action='/chitter/post' method="post">
@@ -14,6 +29,5 @@
         </form>
       </tr>
      </table>
-   </div>
   </body>
 </html>

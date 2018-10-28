@@ -1,15 +1,32 @@
 <html>
+<style>
+/* Style the element with the id "myHeader" */
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style all elements with the class name "city" */
+.cont {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+}
+</style>
  <header>
-    <h1 align="center">Login to use Chitter</h1>
+    <h1 id="myHeader">Login to use Chitter</h1>
   </header>
   <body>
-     <table align="center">
+     <table align="center" class="cont">
      <form action='/chitter/validate' method="post">
-       <tr><td><strong>User Name: </strong></td><td><input type="text" name="UserName" /></td></tr>
-       <tr><td><strong>Password : </strong></td><td><input type="password" name="psw" /></td></tr>
+       <tr><td><strong>User Name: </strong></td><td><input type="text" name="UserName" autofocus required/></td></tr>
+       <tr><td><strong>Password : </strong></td><td><input type="password" name="psw" required/></td></tr>
        <tr><td><input type="submit" name="submit" value="Login" /></td><td><input type="submit" name="submit" value="Cancel" /></td></tr>
        <tr><td><a id="signup" href="/chitter/register">Sign Up</a></td><td><a id="forgot" href="/chitter/passwordreset">Forgot Password</a></td></tr>
      </form>
      </table>
+     <h4 align="center"><%= session[:loginstatus] %></h4>
   </body>
 </html>
