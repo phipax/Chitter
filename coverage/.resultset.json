@@ -1,78 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/phipax/Projects/chitter/spec/features/loginscreen_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/phipax/Projects/chitter/spec/features/test_Infra_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/phipax/Projects/chitter/spec/userauthenticate_spec.rb": [
+      "/Users/phipax/Projects/chitter/spec/post_spec.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1540765768
+    "timestamp": 1540767803
   }
 }

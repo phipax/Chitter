@@ -29,5 +29,11 @@
         </form>
       </tr>
      </table>
+      <dl>
+     <% @posts.each { |post| %>
+       <dt> <%=post[:created_on]%> </dt>
+       <dd> <%=post[:text]%></dd>
+       <%}%>
+       </dl>
   </body>
 </html>

@@ -1,5 +1,7 @@
 require 'sinatra/base'
 require './lib/userauthenticate'
+require './lib/post'
+require './lib/userpost'
 
 class Chitter < Sinatra::Base
   enable :sessions
@@ -38,7 +40,14 @@ class Chitter < Sinatra::Base
   get '/chitter' do
 #    p "From Chitter #{session[:username]} #{session[:passkey]}"
     redirect '/chitter/login' if session[:loginstatus] == ""
+    @posts = Post.display
+  #  p @posts
     erb :chitter
+  end
+
+  post '/chitter/post' do
+    @peep = UserPost.create(params[:peeps])
+    redirect '/chitter'
   end
 
   run! if app_file == $0
